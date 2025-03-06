@@ -24,4 +24,4 @@ jobs:
           commit_options: '--no-verify --signoff'
           commit_user_name: gitHub gctions auto-formatting bot
 name: reformat
-'on': [push, workflow_dispatch]
+'on': [push, workflow_dispatch, pull_request]
