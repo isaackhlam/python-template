@@ -1,0 +1,72 @@
+Results of cspell linter (version 9.1.1)
+See documentation on https://megalinter.io/8.8.0/descriptors/spell_cspell/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+1/5 .githooks/pre-push 1260.71ms X
+.githooks/pre-push:5:16      - Unknown word (deinit)     -- #git submodule deinit --all -f
+	 Suggestions: [delint, dent, dint, debit, deist]
+.githooks/pre-push:9:30      - Unknown word (toplevel)   -- git rev-parse --show-toplevel)":/tmp/lint oxsecurity
+	 Suggestions: [topee, topees, topleft, topless, topline]
+2/5 .mega-linter.yml 295.32ms X
+.mega-linter.yml:1:6       - Unknown word (SHFMT)      -- BASH_SHFMT_ARGUMENTS: "-i 2 -ci
+	 Suggestions: [SHAM, SHAT, SHIM, SHIT, SHMO]
+.mega-linter.yml:2:52      - Unknown word (KICS)       -- COPYPASTE_JSCPD,REPOSITORY_KICS,REPOSITORY_CHECKOV,REPOSITORY
+	 Suggestions: [KI'S, KICK, KIDS, KINS, KIPS]
+.mega-linter.yml:2:117     - Unknown word (DEVSKIM)    -- SPELL_CSPELL,REPOSITORY_DEVSKIM
+	 Suggestions: [DESK, DEVI, DEVS, DKIM, DEISM]
+.mega-linter.yml:3:25      - Unknown word (PYLINT)     -- DISABLE_LINTERS: PYTHON_PYLINT,PYTHON_PYRIGHT,PYTHON
+	 Suggestions: [PLYING, PINT, PAINT, PLANT, PLINK]
+.mega-linter.yml:3:39      - Unknown word (PYRIGHT)    -- PYTHON_PYLINT,PYTHON_PYRIGHT,PYTHON_RUFF,PYTHON_MYPY
+	 Suggestions: [MYRIGHT, Myright, myRight, MyRight, PLIGHT]
+.mega-linter.yml:3:66      - Unknown word (MYPY)       -- PYRIGHT,PYTHON_RUFF,PYTHON_MYPY,YAML_V8R,TYPESCRIPT
+	 Suggestions: [MOPY, MYOPY, MACY, MANY, MAPS]
+.mega-linter.yml:5:31      - Unknown word (venv)       -- DIRECTORIES: models,.venv
+	 Suggestions: [vena, vend, venn, vent, Venn]
+3/5 f766a33f-1104-4c20-9302-3b57fde80efb-megalinter_file_names_cspell.txt 2.07ms
+4/5 Makefile 37.69ms X
+Makefile:11:78     - Unknown word (isort)      -- $$4}' | xargs -I {} isort {}
+	 Suggestions: [isqrt, iSqrt, Isqrt, ISqrt, sort]
+Makefile:18:52     - Unknown word (isort)      -- python -m black $$i; isort $$i; done
+	 Suggestions: [isqrt, iSqrt, Isqrt, ISqrt, sort]
+5/5 requirement.txt 41.83ms X
+requirement.txt:3:8       - Unknown word (pyproject)  -- Flake8-pyproject
+	 Suggestions: [project, projects]
+requirement.txt:4:1       - Unknown word (isort)      -- isort
+	 Suggestions: [isqrt, iSqrt, Isqrt, ISqrt, sort]
+CSpell: Files checked: 5, Issues found: 13 in 4 files.
+
+
+You can skip this misspellings by defining the following .cspell.json file at the root of your repository
+Of course, please correct real typos before :)
+
+{
+    "version": "0.2",
+    "language": "en",
+    "ignorePaths": [
+        "**/node_modules/**",
+        "**/vscode-extension/**",
+        "**/.git/**",
+        "**/.pnpm-lock.json",
+        ".vscode",
+        "package-lock.json",
+        "megalinter-reports"
+    ],
+    "words": [
+        "DEVSKIM",
+        "KICS",
+        "MYPY",
+        "PYLINT",
+        "PYRIGHT",
+        "SHFMT",
+        "deinit",
+        "isort",
+        "pyproject",
+        "toplevel",
+        "venv"
+    ]
+}
+
+
+You can also copy-paste megalinter-reports/.cspell.json at the root of your repository

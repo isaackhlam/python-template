@@ -1,0 +1,25 @@
+Results of checkov linter (version ERROR)
+See documentation on https://megalinter.io/8.8.0/descriptors/repository_checkov/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /github/workspace
+Linter raw log:
+Traceback (most recent call last):
+  File "/venvs/checkov/bin/checkov", line 2, in <module>
+    from checkov.main import Checkov
+  File "/venvs/checkov/lib/python3.13/site-packages/checkov/main.py", line 21, in <module>
+    import checkov.logging_init  # noqa  # should be imported before the others to ensure correct logging setup
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venvs/checkov/lib/python3.13/site-packages/checkov/logging_init.py", line 8, in <module>
+    logging.basicConfig(level=LOG_LEVEL)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/logging/__init__.py", line 2131, in basicConfig
+    root.setLevel(level)
+    ~~~~~~~~~~~~~^^^^^^^
+  File "/usr/local/lib/python3.13/logging/__init__.py", line 1497, in setLevel
+    self.level = _checkLevel(level)
+                 ~~~~~~~~~~~^^^^^^^
+  File "/usr/local/lib/python3.13/logging/__init__.py", line 210, in _checkLevel
+    raise ValueError("Unknown level: %r" % level)
+ValueError: Unknown level: 'NOTICE'
+
